@@ -4,6 +4,7 @@
 
 @push('styles')
 
+
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
 
@@ -40,7 +41,7 @@
 <div class="py-10 px-4">
     <div class="max-w-4xl mx-auto">
         <div class="flex items-center justify-between mb-8">
-            <h1 class="text-3xl font-extrabold text-gray-900 tracking-tight">Buat Pengaduan</h1>
+            <h1 class="text-3xl font-bold text-gray-900 tracking-tight">Buat Pengaduan</h1>
             <a href="{{ url('/') }}" class="text-blue-600 font-medium hover:underline flex items-center">
                 <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
                 Kembali
