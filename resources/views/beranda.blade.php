@@ -50,7 +50,7 @@
             @endif
         </header>
         <div class="w-full">
-            <main class="relative isolate h-150 flex items-center justify-center bg-gray-900">
+            <main class="relative isolate h-160 flex items-center justify-center bg-gray-900">
                 <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&crop=focalpoint&fp-y=.8&w=2830&h=1500&q=80&blend=111827&sat=-100&exp=15&blend-mode=screen"
                     alt="" class="absolute inset-0 -z-10 size-full object-cover opacity-40" />
                 <div class="mx-auto max-w-full px-6 py-20 text-center">
@@ -120,12 +120,11 @@
                     </div>
                 </div>
 
-                <h3 class="mb-6 text-center md:text-4xl font-bold tracking-tight text-black">
-                    Statistik aset tahun 2026
+                <h3 class="mb-6 text-center md:text-3xl font-bold tracking-tight text-black">
+                    Kendali Penuh atas Infrastruktur Penerangan Kota
                 </h3>
                 <p class="text-center text-lg leading-8 font-base leading-relaxed text-gray-600 max-w-2xl mx-auto">
-                    Aplikasi WebGIS yang dirancang untuk membantu pemerintah dan masyarakat dalam memantau kondisi
-                    Penerangan Jalan Umum secara menyeluruh. Informasi disajikan secara visual, terpusat, dan mudah diakses.
+                    Seluruh aset PJU dapat dipantau secara menyeluruh melalui sistem ini. Akses cepat ke identitas aset, kondisi, serta riwayat perawatan, memberikan efisiensi tinggi dalam pengelolaan infrastruktur kota.
                 </p>
 
             </article>
