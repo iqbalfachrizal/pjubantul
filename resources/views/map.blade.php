@@ -2,40 +2,30 @@
 
 @section('title', 'Map')
 
-@push('styles')
-    <!-- Leaflet CSS -->
-    <link
-        rel="stylesheet"
-        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-    />
-
-    <style>
-        #map {
-            height: 500px;
-            width: 100%;
-        }
-    </style>
-@endpush
-
 @section('content')
-    <h2>Map Page</h2>
-    <div id="map"></div>
+<div class="max-w-6xl mx-auto p-6">
+    <h2 class="text-2xl font-bold mb-4">Leaflet Map</h2>
+
+    <div
+        id="map"
+        class="w-full h-[500px] rounded-lg shadow"
+    ></div>
+</div>
 @endsection
 
 @push('scripts')
-    <!-- Leaflet JS -->
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-
-    <script>
-        const map = L.map('map').setView([-7.891531320417377, 110.31748408931763], 13);
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const map = L.map('map').setView([-7.891531320417377, 110.31748408931763], 13)
 
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '&copy; OpenStreetMap contributors'
-        }).addTo(map);
+        }).addTo(map)
 
         L.marker([-7.891531320417377, 110.31748408931763])
             .addTo(map)
-            .bindPopup('Hello from Leaflet + Laravel!')
-            .openPopup();
-    </script>
+            .bindPopup('Styled with Tailwind!')
+            .openPopup()
+    })
+</script>
 @endpush
