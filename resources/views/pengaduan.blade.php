@@ -3,14 +3,12 @@
 @section('title', 'Kirim Pengaduan Baru')
 
 @push('styles')
-<script src="https://cdn.tailwindcss.com"></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
 
 <style>
-    body { font-family: 'Inter', sans-serif; background-color: #f3f4f6; }
+
     #map-input { height: 400px; width: 100%; border-radius: 12px; z-index: 10; border: 2px solid #e5e7eb; }
     .glass-card { background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(10px); }
     .locate-button {
