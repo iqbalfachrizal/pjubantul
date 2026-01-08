@@ -20,8 +20,8 @@
             <span class="font-bold text-lg">My App</span>
 
             <div class="space-x-4">
-                <a href="/" class="text-gray-600 hover:text-black">Home</a>
-                <a href="/map" class="text-gray-600 hover:text-black">Map</a>
+                <a href="/" class="font-bold text-gray-600 hover:text-black">Home</a>
+                <a href="/map" class="font-bold text-gray-600 hover:text-black">Map</a>
             </div>
         </div>
     </nav>
@@ -33,8 +33,8 @@
 
     {{-- Footer --}}
     <footer class="bg-white border-t mt-10">
-        <div class="max-w-7xl mx-auto px-6 py-4 text-sm text-gray-500">
-            © {{ date('Y') }} My App
+        <div class=" text-center max-w-7xl mx-auto px-6 py-4 text-sm text-gray-600">
+            © {{ date('Y') }} PJU Kabupaten Bantul
         </div>
     </footer>
 
