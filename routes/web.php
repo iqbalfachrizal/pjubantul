@@ -18,5 +18,5 @@ Route::get('/laporan/{id}', [ReportController::class, 'show'])->name('pengaduan.
 
 // Route Map (Sesuai tombol 'Lihat Peta' di beranda)
 Route::get('/map', function () {
-    return "Halaman Peta Belum Dibuat"; // Atau arahkan ke controller map
+    return view('map'); // Ini akan memanggil file resources/views/map.blade.php
 });
