@@ -65,13 +65,13 @@
                     </p>
 
                     <div class="mt-10 flex justify-center gap-x-6">
-                        <a href="#"
+                        <a href="/map"
                             class="rounded-4xl text-lg bg-white px-8 py-4 text-black font-semibold shadow-sm hover:bg-gray-200">
                             Lihat Peta
                         </a>
-                        <a href="#"
+                        <a href="/pengaduan"
                             class="rounded-4xl text-lg bg-blue-600 px-8 py-4 text-white font-semibold shadow-sm hover:bg-blue-500">
-                            Kirim Laporan
+                            Kirim Aduan
                         </a>
                     </div>
 
