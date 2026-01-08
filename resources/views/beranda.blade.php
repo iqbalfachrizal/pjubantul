@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Beranda')
+@section('title', 'PJU Kabupaten Bantul')
 
 @section('content')
     <!DOCTYPE html>
