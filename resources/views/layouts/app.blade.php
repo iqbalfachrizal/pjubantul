@@ -38,9 +38,9 @@
             </div>
 
             <div class="hidden md:flex items-center space-x-8">
-                <a href="/" class="text-sm font-semibold text-gray-600 hover:text-blue-600 transition-colors">Home</a>
-                <a href="/map" class="text-sm font-semibold text-gray-600 hover:text-blue-600 transition-colors">Map</a>
-                <a href="#" class="rounded-md bg-blue-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-blue-500">Login</a>
+                <a href="/" class="text-medium font-medium text-gray-600 hover:text-blue-600 transition-colors">Home</a>
+                <a href="/map" class="text-medium font-medium text-gray-600 hover:text-blue-600 transition-colors">Map</a>
+                <a href="#" class="rounded-3xl bg-blue-600 px-4 py-2 text-medium font-medium text-white shadow-sm hover:bg-blue-500">Login</a>
             </div>
         </div>
     </nav>
