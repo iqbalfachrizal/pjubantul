@@ -28,7 +28,7 @@
 
         <div class="w-full">
             <main class="relative isolate h-160 flex items-center justify-center bg-gray-900">
-                <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&crop=focalpoint&fp-y=.8&w=2830&h=1500&q=80&blend=111827&sat=-100&exp=15&blend-mode=screen"
+                <img src="https://warta.jogjakota.go.id/assets/instansi/warta/article/20231123174101.JPG"
                     alt="" class="absolute inset-0 -z-10 size-full object-cover opacity-40" />
                 <div class="mx-auto max-w-full px-6 py-20 text-center">
 
@@ -41,22 +41,16 @@
                         Kabupaten Bantul. Akurat, terstruktur, dan dapat diakses publik.
                     </p>
 
-                   <div class="mt-10 flex flex-wrap justify-center gap-4"> <a href="/map"
-        class="rounded-full text-lg bg-white px-8 py-4 text-black font-semibold shadow-sm hover:bg-gray-200 transition">
-        Lihat Peta
-    </a>
-
-    <a href="{{ route('pengaduan.create') }}"
-        class="rounded-full text-lg bg-blue-600 px-8 py-4 text-white font-semibold shadow-sm hover:bg-blue-500 transition">
-        Kirim Aduan
-    </a>
-
-    <a href="{{ route('pengaduan.list') }}"
-        class="rounded-full text-lg bg-gray-900 px-8 py-4 text-white font-semibold shadow-sm hover:bg-gray-800 transition border border-gray-700">
-        Pantau Aduan
-    </a>
-
-</div>
+                    <div class="mt-10 flex justify-center gap-x-6">
+                        <a href="/map"
+                            class="rounded-4xl text-lg bg-white px-8 py-4 text-black font-semibold shadow-sm hover:bg-gray-200">
+                            Lihat Peta
+                        </a>
+                        <a href="/pengaduan"
+                            class="rounded-4xl text-lg bg-blue-600 px-8 py-4 text-white font-semibold shadow-sm hover:bg-blue-500">
+                            Kirim Aduan
+                        </a>
+                    </div>
 
                 </div>
             </main>

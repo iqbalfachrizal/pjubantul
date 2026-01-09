@@ -20,3 +20,12 @@ Route::get('/laporan/{id}', [ReportController::class, 'show'])->name('pengaduan.
 Route::get('/map', function () {
     return view('map'); // Ini akan memanggil file resources/views/map.blade.php
 });
+Route::get('/map', function () {
+    return view('map');
+});
+
+use App\Http\Controllers\PengaduanController;
+
+Route::get('/pengaduan', [PengaduanController::class, 'index'])->name('pengaduan.index');
+
+Route::post('/pengaduan', [PengaduanController::class, 'store'])->name('pengaduan.store');
