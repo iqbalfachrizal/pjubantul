@@ -13,21 +13,7 @@
     @stack('styles')
 </head>
 <body class="bg-gray-100 text-gray-800">
-
-    {{-- Navbar --}}
-    {{-- <nav class="bg-white shadow">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between">
-            <div class="flex justify-center align-center"><img class="h-10 w-auto" src="{{ asset('img/logo_kabupaten_bantul.png') }}" alt="">
-            <span class="font-bold text-lg">My App</span></div>
-            
-
-            <div class="space-x-4">
-                <a href="/" class="font-bold text-gray-600 hover:text-black">Home</a>
-                <a href="/map" class="font-bold text-gray-600 hover:text-black">Map</a>
-            </div>
-        </div>
-    </nav> --}}
-    <nav class="bg-white shadow">
+    <nav class="bg-white shadow sticky top-0 z-50">
         <div class="max-w-8xl mx-auto px-6 py-4 flex justify-between items-center">
             <div class="flex items-center gap-x-3">
                 <img class="h-10 w-auto" src="{{ asset('img/logo_kabupaten_bantul.png') }}" alt="Logo Kabupaten Bantul">
