@@ -5,11 +5,28 @@
 @section('content')
 <div class="py-6">
    
-    
+    <div class=" bg-gray-100 rounded-lg shadow-md w-[60vw] mx-auto my-[2vh]">
+    <div class="flex">
+        <input
+            id="addressSearch"
+            type="text"
+            placeholder="Search address or place..."
+            class="flex-1 px-3 py-2 border-r outline-none rounded-l-lg text-sm"
+        />
+        <button
+            id="searchBtn"
+            class="px-4 text-sm font-medium bg-blue-600 text-white rounded-r-lg hover:bg-blue-700"
+        >
+            Search
+        </button>
+    </div>
+    <div id="searchStatus" class="text-xs text-gray-500 px-3 py-1 hidden"></div>
+</div>
     <div
         id="map"
         class=" max-w-screen  w-screen h-[80vh] border-4 border-gray-300 rounded-lg "
     ></div>
+    
     <!-- Overlay -->
 <div
     id="panelOverlay"
@@ -23,7 +40,7 @@
            transform translate-x-full transition-duration-300
            z-2100 overflow-y-auto"
 >
-    <div class="p-4 border-b flex justify-between items-center sticky top-0 bg-white z-10">
+    <div class=" border-b flex justify-between items-center sticky top-0 bg-white z-10">
         <h3 class="text-lg font-bold">Street Light Detail</h3>
         <button id="closePanel" class="text-xl text-gray-500 hover:text-gray-800">
             &times;
@@ -162,6 +179,81 @@ document.addEventListener('DOMContentLoaded', () => {
     const lampContent = document.getElementById('lampContent')
     const panelOverlay = document.getElementById('panelOverlay')
     const closePanel = document.getElementById('closePanel')
+    // =======================
+// Address → Point Search
+// =======================
+
+let searchMarker = null;
+
+const searchInput = document.getElementById('addressSearch');
+const searchBtn = document.getElementById('searchBtn');
+const searchStatus = document.getElementById('searchStatus');
+
+async function searchAddress(query) {
+    if (!query.trim()) return;
+
+    searchStatus.textContent = 'Searching...';
+    searchStatus.classList.remove('hidden');
+
+    try {
+        const response = await fetch(
+            `https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(query)}&limit=1`,
+            {
+                headers: {
+                    'User-Agent': 'StreetLightMap/1.0'
+                }
+            }
+        );
+
+        const results = await response.json();
+
+        if (!results.length) {
+            searchStatus.textContent = 'No results found';
+            return;
+        }
+
+        const result = results[0];
+        const lat = parseFloat(result.lat);
+        const lng = parseFloat(result.lon);
+
+        // Remove old marker
+        if (searchMarker) {
+            map.removeLayer(searchMarker);
+        }
+
+        // Add marker
+        searchMarker = L.marker([lat, lng], {
+            draggable: false
+        }).addTo(map);
+
+        searchMarker.bindPopup(`
+            <strong>Search Result</strong><br>
+            ${result.display_name}
+        `).openPopup();
+
+        // Move map
+        map.setView([lat, lng], 17, { animate: true });
+
+        searchStatus.textContent = result.display_name;
+
+    } catch (error) {
+        console.error(error);
+        searchStatus.textContent = 'Search failed';
+    }
+}
+
+// Button click
+searchBtn.addEventListener('click', () => {
+    searchAddress(searchInput.value);
+});
+
+// Enter key
+searchInput.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+        searchAddress(searchInput.value);
+    }
+});
+
 
 async function openLampPanel(light) {
     // Show loading state
