@@ -43,12 +43,16 @@
 
                     <div class="mt-10 flex justify-center gap-x-6">
                         <a href="/map"
-                            class="rounded-4xl text-lg bg-white px-8 py-4 text-black font-semibold shadow-sm hover:bg-gray-200">
+                            class="rounded-4xl text-lg bg-white px-8 py-4 text-black font-semibold shadow-sm hover:bg-blue-500 hover:text-white">
                             Lihat Peta
                         </a>
                         <a href="/pengaduan"
-                            class="rounded-4xl text-lg bg-blue-600 px-8 py-4 text-white font-semibold shadow-sm hover:bg-blue-500">
+                            class="rounded-4xl text-lg bg-blue-500 px-8 py-4 text-white font-semibold shadow-sm hover:bg-white hover:text-black">
                             Kirim Aduan
+                        </a>
+                        <a href="/laporan"
+                            class="rounded-4xl text-lg bg-white px-8 py-4 text-black font-semibold shadow-sm hover:bg-blue-500 hover:text-white">
+                            Lihat Laporan
                         </a>
                     </div>
 
